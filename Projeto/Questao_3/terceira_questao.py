@@ -52,5 +52,3 @@ def terceira_questao():
     q0 = 'q0'
     estados_finais = ['100', '125', '150', '175']
     maquina_mealy(funcao_transicao_q2, q0, estados_finais)
-
-terceira_questao()

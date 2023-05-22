@@ -44,13 +44,12 @@ def automato_a(cadeia:str):
   alfabeto_a = ['a', 'b', 'c']
   funcao_transicao_a = {
     ('q0', 'a'): 'q1',
-    ('q0', 'c'): 'q0',
-    ('q1', 'b'): 'q2',
-    ('q2', 'a'): 'q1',
+    ('q1', 'b'): 'q1',
+    ('q1', 'c'): 'q2',
     ('q2', 'c'): 'q2'
   }
   estado_inicial_a = 'q0'
-  estados_finais_a = ['q0', 'q2']
+  estados_finais_a = ['q0', 'q1', 'q2']
 
   return automato_1(funcao_transicao_a, estado_inicial_a, estados_finais_a, cadeia)
 
