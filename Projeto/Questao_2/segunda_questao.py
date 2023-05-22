@@ -1,3 +1,5 @@
+#Função de define o automato
+
 def automato_2(funcao_transicao,q0,conj_est_finais, cadeia):
     '''
       Gerador de automato 
