@@ -60,7 +60,7 @@ def automato_a(cadeia:str):
 def automato_b(cadeia:str):
   '''
    Validação de cadeia no automato da primeira questão, letra B
-   É usado uma chamada de outra função (automato), para a criação do automato,
+   É usado uma chamada de outra função (automato_1), para a criação do automato,
    sendo passado o automato desenvolvido para a alternativa
    
    Args: 
@@ -94,12 +94,43 @@ def automato_b(cadeia:str):
 
 # LETRA C 
 
+def automato_c(cadeia:str):
+  '''
+   Validação de cadeia no automato da primeira questão, letra C
+   É usado uma chamada de outra função (automato_1), para a criação do automato,
+   sendo passado o automato desenvolvido para a alternativa
+   
+   Args: 
+    cadeia de string a ser analizada no automato criado
+
+   Return: 
+    Return da função automato. Print da transições utilizadas.
+    Valor booleano da validação da cadeia.
+  '''
+  estados_c = ['q0','q1','q2','q3','q4','q5']
+  alfabeto_c = ['a','b']
+  funcao_transicao_c={
+    ('q0','a'):'q1',
+    ('q0','b'):'q3',
+    ('q1','a'):'q2',
+    ('q1','b'):'q4',
+    ('q2','b'):'q3',
+    ('q2','a'):'q2',
+    ('q4','b'):'q5',
+    ('q5','b'):'q5',  
+  }
+  estado_inicial_c= 'q0'
+  estados_finais_c= ['q1','q3','q4','q5']
+
+  return automato_1(funcao_transicao_c,estado_inicial_c,estados_finais_c,cadeia)
+
+
 # LETRA D 
 
 def automato_d (cadeia:str):
   '''
    Validação de cadeia no automato da primeira questão, letra D
-   É usado uma chamada de outra função (automato), para a criação do automato,
+   É usado uma chamada de outra função (automato_1), para a criação do automato,
    sendo passado o automato desenvolvido para a alternativa
    
    Args: 
