@@ -46,7 +46,11 @@ def automato_a(cadeia:str):
     ('q0', 'a'): 'q1',
     ('q1', 'b'): 'q1',
     ('q1', 'c'): 'q2',
-    ('q2', 'c'): 'q2'
+    ('q1', 'a'): 'q2',
+    ('q2', 'c'): 'q2',
+    ('q2', 'a'): 'q1',
+    ('q2', 'b'): 'q1',
+  
   }
   estado_inicial_a = 'q0'
   estados_finais_a = ['q0', 'q1', 'q2']
@@ -116,6 +120,7 @@ def automato_c(cadeia:str):
     ('q2','b'):'q3',
     ('q2','a'):'q2',
     ('q4','b'):'q5',
+    ('q4','a'):'q1',
     ('q5','b'):'q5',  
   }
   estado_inicial_c= 'q0'
@@ -150,6 +155,7 @@ def automato_d (cadeia:str):
       ('q2','a'):'q3',
       ('q2','b'):'q2',
       ('q3','c'):'q3',
+      ('q3','a'):'q1'
   }
   estado_inicial_d= 'q0'
   estados_finais_d=['q1','q3']
